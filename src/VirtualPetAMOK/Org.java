@@ -1,16 +1,17 @@
 package VirtualPetAMOK;
 
-	public interface Org {
+public interface Org {
 
-		String getName();
+	String getName();
 
-		void feed();
+	void feed();
 
-		void water();
-		
-		int tick();
-		
-		int getHunger();
-		int getThirst();
+	void water();
 
-	}
+	int tick();
+
+	int getHunger();
+
+	int getThirst();
+
+}

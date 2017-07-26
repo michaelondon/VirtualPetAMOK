@@ -1,6 +1,6 @@
+package VirtualPetAMOK;
 
-
-public class OrgCat extends Cat implements OrganicPet {
+public class OrgCat extends Cat implements Org {
 	protected int hunger;
 	protected int thirst;
 
@@ -12,14 +12,14 @@ public class OrgCat extends Cat implements OrganicPet {
 
 	@Override
 	public void feed() {
-		hunger -= 20;
-		mood += 10;
+		hunger -= 10;
+		mood += 5;
 	}
 
 	@Override
 	public void water() {
 		thirst -= 20;
-		mood += 10;
+		mood += 5;
 	}
 
 	@Override
@@ -39,9 +39,9 @@ public class OrgCat extends Cat implements OrganicPet {
 
 	@Override
 	public void play() {
-		mood += 20;
-		hunger += 10;
-		thirst += 10;
+		mood += 10;
+		hunger += 5;
+		thirst += 5;
 	}
 
 	@Override
@@ -49,6 +49,7 @@ public class OrgCat extends Cat implements OrganicPet {
 		hunger += (5 + generateRandom());
 		thirst += (5 + generateRandom());
 		mood -= (5 + generateRandom());
+		health += (5 + generateRandom());
 		return 5;
 	}
 
@@ -68,7 +69,7 @@ public class OrgCat extends Cat implements OrganicPet {
 	}
 
 	public void decreaseHealth() {
-		health -= 10;
+		health -= 5;
 	}
 
 }
